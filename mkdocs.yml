@@ -1,4 +1,13 @@
 site_name: Linux
 theme:
   name: 'material'
-
+nav:
+- Home: 'index.md'
+- Introducción:
+    - Part1 : 
+      - writing:
+        - 'Writing your docs': 'writing-your-docs.md'
+    - 'Styling your docs': 'styling-your-docs.md'
+- Acerca:
+    - 'About me': 'license.md'
+    - 'ACECOM': 'release-notes.md'
