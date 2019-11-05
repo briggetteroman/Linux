@@ -1,11 +1,11 @@
 # Todo sobre Linux
 
-Aquí encontrarás toda información sobre Linux, desde su historia, comandos en linea, certificaciones y algunos libros de referencia.
+Aquí encontrarás toda información sobre Linux, desde su historia, comandos de linea (CLI), certificaciones y algunos libros de referencia.
 
 
- <table align="center" bgcolor="#FFFFFF"  >
+ <table text-align="center" bgcolor="#FFFFFF"  >
   <tr>
-    <th><p weight="bold" color="#FFFFFF"> Mascota de Linux </p> </th>
+    <th><p weight="bold" color="#FFFFFF" text-align="center"> Mascota de Linux </p> </th>
     <th> <img src="images/tux.png" alt="Tux" width="200"/> </th>
   </tr>
 </table> 
