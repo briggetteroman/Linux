@@ -1,16 +1,36 @@
 site_name: Linux
 theme:
   name: 'material'
+  feature:
+      tabs: false
 extra_css:
-- ./css/extra.css
-# #  - css/second_extra.css
+- css/extra.css
 nav:
 - Home: 'index.md'
 - Introducción:
-    - Part1 : 
-      - writing:
-        - 'Writing your docs': 'writing-your-docs.md'
-    - 'Styling your docs': 'styling-your-docs.md'
+  - 'Guia': 'introduction/guide.md'
+- Primera Parte : 
+  - Arquitectura:
+    - 'Proceso de Booteo': 'part1/arquitectura.md'
+  - Instalación de Linux:
+    - 'Writing your docs': 'writing-your-docs.md'
+  - Gestión de paquetes:
+    - 'Writing your docs': 'writing-your-docs.md'
+  - Comandos Unix y GNU:
+    - 'Comandos UNIX': 'part1/unixCommands.md'
+#   - Sistema de Archivos: ''  
+# - Segunda Parte:
+#     - 
+
 - Acerca:
     - 'About me': 'license.md'
     - 'ACECOM': 'release-notes.md'
+
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - toc:
+      permalink: true
