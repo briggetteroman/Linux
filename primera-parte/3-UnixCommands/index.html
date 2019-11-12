@@ -378,9 +378,65 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Comandos UNIX
+      </label>
+    
     <a href="./" title="Comandos UNIX" class="md-nav__link md-nav__link--active">
       Comandos UNIX
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-del-sistema-operativo" class="md-nav__link">
+    Informacion del Sistema Operativo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#echo-en-consola" class="md-nav__link">
+    Echo en Consola
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#los-metacharecters" class="md-nav__link">
+    Los metacharecters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacion-entre-la-estructura-del-directorio" class="md-nav__link">
+    Navegacion entre la estructura del directorio
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -568,6 +624,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-del-sistema-operativo" class="md-nav__link">
+    Informacion del Sistema Operativo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#echo-en-consola" class="md-nav__link">
+    Echo en Consola
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#los-metacharecters" class="md-nav__link">
+    Los metacharecters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacion-entre-la-estructura-del-directorio" class="md-nav__link">
+    Navegacion entre la estructura del directorio
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -580,6 +679,99 @@
                 
                 
                 <h1 id="comandos-unix">Comandos Unix<a class="headerlink" href="#comandos-unix" title="Permanent link">&para;</a></h1>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>readlist /bin/bash
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="nv">$SHELL</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span>  <span class="nv">$BASH_VERSION</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="informacion-del-sistema-operativo">Informacion del Sistema Operativo<a class="headerlink" href="#informacion-del-sistema-operativo" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>uname
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>uname -r
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>uname -a
+</pre></div>
+</td></tr></table>
+
+<h2 id="echo-en-consola">Echo en Consola<a class="headerlink" href="#echo-en-consola" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> Linux Corazon
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> El costo es <span class="nv">$2</span>.00
+</pre></div>
+</td></tr></table>
+
+<h3 id="los-metacharecters">Los metacharecters<a class="headerlink" href="#los-metacharecters" title="Permanent link">&para;</a></h3>
+<p>? [ ] ' " \ $ ; &amp; ( ) | ^ &lt; &gt; *</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> El costo es <span class="se">\$</span><span class="m">2</span>.00
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> Is Schrodinger<span class="se">\&#39;</span>s cat alive or dead<span class="se">\?</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> Is <span class="s2">&quot;Schrodinger&#39;s&quot;</span> cat alive or <span class="s2">&quot;dead?&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Is Schrodinger&#39;s cat alive or dead?&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;Is Schrodinger&#39;</span>s cat alive or dead?<span class="err">&#39;</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="navegacion-entre-la-estructura-del-directorio">Navegacion entre la estructura del directorio<a class="headerlink" href="#navegacion-entre-la-estructura-del-directorio" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">pwd</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> 
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ls
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ls -lt
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat &lt;filename&gt;
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">pwd</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">pwd</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">pwd</span>
+</pre></div>
+</td></tr></table>
+
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 </td></tr></table>
