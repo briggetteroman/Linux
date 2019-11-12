@@ -25,7 +25,7 @@ uname -r
 ``` bash
 uname -a
 ```
-## Echo en Consola
+## Imprimiendo mensajes en consola
 ``` bash
 echo
 ```
@@ -61,24 +61,62 @@ echo 'Is Schrodinger's cat alive or dead?'
 ```
 ## Navegacion entre la estructura del directorio
 
+### Conociendo el entorno de trabajo
 ``` bash
 pwd
 ```
+
+### Cambiando de directorio
 
 ``` bash
 cd 
 ```
 
 ``` bash
-ls
+cd Documents/
 ```
 
 ``` bash
-ls -lt
+cd /etc
+```
+### Ruta o Dirección Absoluta
+``` bash
+/home/username/Escritorio/Archivos/
 ```
 
+### Ruta o Dirección Relativa
 ``` bash
-cat <filename>
+Escritorio/Archivos/
+```
+
+## Variables de Entorno y su configuración
+
+``` bash
+set
+```
+### Lista de Variables comunes
+ * BASH_VERSION
+ * EDITOR
+ * GROUPS
+ * HISTFILE
+ * HISTSIZE
+ * HOME
+ * HOSTNAME
+ * LANG
+ * LC_*
+ * LC_ALL
+ * LD_LIBRARY
+ * PATH
+ * PS1
+ * PS2
+ * PWD
+ * SHLVL
+ * TZ
+ * UID
+ * VISUAL
+ 
+``` bash
+echo $PATH
 ```
 
 ``` bash
