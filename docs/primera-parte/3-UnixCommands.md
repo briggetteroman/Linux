@@ -106,7 +106,7 @@ set
  * LC_*
  * LC_ALL
  * LD_LIBRARY
- * PATH
+ * PATH3
  * PS1
  * PS2
  * PWD
@@ -119,18 +119,70 @@ set
 echo $PATH
 ```
 
+## Obteniendo ayuda por consola
+
 ``` bash
-pwd
+apropos <command name>
 ```
 
 ``` bash
-pwd
+man 
 ```
 
 ``` bash
-pwd
+man <command name>
 ```
 
 ``` bash
-pwd
+history
 ```
+
+``` bash
+apropos <command name>
+```
+
+## Procesando de archivos texto
+``` bash
+cat -n<number lines> <filename>
+```
+
+``` bash
+cut
+```
+
+``` bash
+expand
+```
+
+``` bash
+unexpand
+```
+
+``` bash
+fmt
+```
+
+``` bash
+pr
+```
+
+``` bash
+head
+```
+
+``` bash
+tail
+```
+
+``` bash
+join
+```
+
+``` bash
+paste
+```
+
+``` bash
+sort
+```
+
