@@ -1,6 +1,5 @@
 # Comandos Unix
 
-
 ``` bash
 readlist /bin/bash
 ```
@@ -185,4 +184,27 @@ paste
 ``` bash
 sort
 ```
+
+``` bash
+uniq
+```
+
+``` bash
+split
+```
+
+``` bash
+od
+```
+
+``` bash
+wc
+```
+
+``` bash
+sed
+```
+
+!!! note "Considerar"
+    Todos los comandos que se muestran en esta pagina no son los únicos, pero si son los esenciales de conocer.
 
