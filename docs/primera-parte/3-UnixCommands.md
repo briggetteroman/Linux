@@ -124,6 +124,42 @@ echo $PATH
 apropos <command name>
 ```
 
+### Uso de opciones 
+
+```bash 
+ls -l
+```
+
+``` bash
+ls -l -t
+```
+
+``` bash
+commandname -<<x><y><z>...>
+```
+
+``` bash
+ls -lt
+```
+
+``` bash
+ls --all
+```
+
+``` bash
+ls -a
+```
+
+``` bash
+ls --author
+```
+
+``` bash
+ls --block-size=<SIZE>
+```
+
+
+### Obteniendo información de Comandos
 ``` bash
 man 
 ```
@@ -136,6 +172,18 @@ man <command name>
 history
 ```
 
+``` bash
+apropos <command name>
+```
+
+## Uso de expresiones regulares
+
+* 
+``` bash
+apropos <command name>
+```
+
+## Transferencia, redirección, y Canalizado o Tubería(Pipe)
 ``` bash
 apropos <command name>
 ```
@@ -206,5 +254,6 @@ sed
 ```
 
 !!! note "Considerar"
-    Todos los comandos que se muestran en esta pagina no son los únicos, pero si son los esenciales de conocer.
+    Todos los comandos que se muestran en esta página no son todos los existentes, pero son esenciales de conocer.
+    Además, en los siguientes capitulos se detallarán algunos otros.
 

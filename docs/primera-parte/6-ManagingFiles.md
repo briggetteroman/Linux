@@ -39,23 +39,29 @@ rm filename
 ``` bash
 rm -r directory
 ```
-
+## Creando archivos
 ``` bash
-cp -r
+touch newFileName
 ```
 
 ``` bash
-cp -r
+file fileName
+```
+
+## Compresión de ficheros
+
+``` bash
+tar czvf
 ```
 
 ``` bash
-cp -r
+tar xzvf
 ```
 
 ``` bash
-cp -r
+gzip
 ```
 
 ``` bash
-cp -r
+unzip
 ```

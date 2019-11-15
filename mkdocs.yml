@@ -3,6 +3,8 @@ theme:
   name: 'material'
   feature:
       tabs: false
+  static_templates:
+    - sitemap.html
 extra_css:
 - css/extra.css
 nav:
@@ -13,6 +15,7 @@ nav:
   - Arquitectura:
     - 'Proceso de Booteo': 'primera-parte/1-Arquitecture.md'
   - Instalación de Linux:
+    - 'Creación de USB boot': 'primera-parte/2-USBBoot.md'
     - 'Particiones': 'primera-parte/2-Partitions.md'
     - 'Instalación Ubuntu': 'primera-parte/2-Install-Ubuntu.md'
     - 'Instalación Fedora': 'primera-parte/2-Install-Fedora.md'
