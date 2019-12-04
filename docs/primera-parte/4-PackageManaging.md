@@ -1,7 +1,9 @@
 # Gestión de Paquetes y Procesos
 ## Gestores de paquetes y repositorios
-### Usando el gestor de paquetes RPM
-
+### Gestor de paquetes RPM
+``` 
+NOMBREPAQUETE - VERSION - RELEASE . ARQUITECTURA .rpm
+```
 ### Usando YUM
 ### Usando el gestor de paquetes ZYPP
 ### Usando gestor de paquetes DPKG
