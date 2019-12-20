@@ -8,11 +8,10 @@
     * VMware Player.
 
 #### Enlaces de Descarga
-* https://www.kali.org/downloads/
-or 
-* https://cdimage.kali.org/kali-2019.4/kali-linux-2019.4-gnome-amd64.iso
-* https://www.virtualbox.org/wiki/Downloads
-* https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0
+* [Enlace de Descarga Kali Linux](https://www.kali.org/downloads/) 
+or [Enlace para Descargar ISO Kali Linux 2019.4](https://cdimage.kali.org/kali-2019.4/kali-linux-2019.4-gnome-amd64.iso)
+* [Enlace para Descargar VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* [Enlace para Descargar VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0)
 
 
 ### Primeros Pasos

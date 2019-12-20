@@ -9,11 +9,10 @@
 
  
 #### Enlaces de Descarga
-* https://getfedora.org/es/workstation/download/
-or
-* https://download.fedoraproject.org/pub/fedora/linux/releases/31/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-31-1.9.iso
-* https://www.virtualbox.org/wiki/Downloads
-* https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0
+* [Enlace de Descarga Fedora](https://getfedora.org/es/workstation/download/) or [Enlace de Descarga Fedora WorkStation 31](https://download.fedoraproject.org/pub/fedora/linux/releases/31/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-31-1.9.iso)
+* [Enlace para Descargar VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* [Enlace para Descargar VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0)
+
 
 
 ### Primeros Pasos

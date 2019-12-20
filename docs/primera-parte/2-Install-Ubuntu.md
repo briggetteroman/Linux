@@ -8,11 +8,10 @@
     * VMware Player.
 
 #### Enlaces de Descarga
-* https://ubuntu.com/download/desktop
-or 
-* https://ubuntu.com/download/desktop/thank-you?country=PE&version=18.04.3&architecture=amd64
-* https://www.virtualbox.org/wiki/Downloads
-* https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0
+* [Enlace de Descarga Ubuntu Desktop](https://ubuntu.com/download/desktop)
+or [Enlace de Descarga Ubuntu Desktop 18.04](https://ubuntu.com/download/desktop/thank-you?country=PE&version=18.04.3&architecture=amd64)
+* [Enlace para Descargar VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* [Enlace para Descargar VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0)
 
 
 ### Primeros Pasos
