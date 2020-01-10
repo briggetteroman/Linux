@@ -255,5 +255,5 @@ sed
 
 !!! note "Considerar"
     Todos los comandos que se muestran en esta página no son todos los existentes, pero son esenciales de conocer.
-    Además, en los siguientes capitulos se detallarán algunos otros.
+    Además, en los siguientes capítulos se detallarán algunos otros.
 

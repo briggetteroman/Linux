@@ -63,5 +63,9 @@ gzip
 ```
 
 ``` bash
+zip
+```
+
+``` bash
 unzip
 ```
