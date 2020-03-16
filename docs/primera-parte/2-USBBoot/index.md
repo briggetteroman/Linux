@@ -8,8 +8,9 @@
 En este caso usare la herramienta `Disks` que viene instalado por defecto en Ubuntu.
 Como se observa en la imagen, basta con buscarlo directamente con el nombre `Disks` o `Discos`.
 
-![Disks](disks.png)
- <!-- <img src="disks.png" >  -->
+![Disks](/docs/images/disks.png "Disks")
+ <!-- <img src="../images/disks.png" alt="Smiley face" height="42" width="42">  -->
+ 
 Una vez abierta la herramienta, se procederá a escoger el Dispositivo de Almacenamiento para crear el USB Booteable
 !!! warning "Considerar"
     Que el Disco Duro también es un dispositivo de almacenamiento por lo tanto estará listado. Cuidado con escoger el disco duro para crear el Booteable.
@@ -25,7 +26,7 @@ df -h
 ```
 
 
-``` bashheight="42" width="42"
+``` bash
 dd if= of= 
 ```
 
