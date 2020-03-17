@@ -8,12 +8,21 @@
 En este caso usare la herramienta `Disks` que viene instalado por defecto en Ubuntu.
 Como se observa en la imagen, basta con buscarlo directamente con el nombre `Disks` o `Discos`.
 
-![Disks](disks.png)
- <!-- <img src="disks.png" >  -->
-Una vez abierta la herramienta, se procederá a escoger el Dispositivo de Almacenamiento para crear el USB Booteable
-!!! warning "Considerar"
-    Que el Disco Duro también es un dispositivo de almacenamiento por lo tanto estará listado. Cuidado con escoger el disco duro para crear el Booteable.
+![](disks.png "disks")
 
+Una vez abierta la herramienta.
+
+!!! warning "Considerar"
+    Que el `Disco Duro(HDD)` también es una unidad de almacenamiento por lo tanto estará listado. Cuidado con escoger el disco duro para crear el Booteable.
+
+1. Se procederá a escoger la unidad de Almacenamiento para crear el USB Booteable.
+![](selectDevice.png "device")
+
+
+2. Luego en el menú ubicado en el lado derecho superior, como se observa en la imagen siguiente, y se le dará a la opción `Restore Disk Image`.
+![](restoreDisk.png "restore image")
+
+3. Aparecerá una ventana 
 
 #### Comando de Linea (CLI)
 Como no siempre se tiene interfaz gráfica, aquí explicaré el uso del comando `DD` o Copia en Duro para la creación de un USB boot.
@@ -24,8 +33,7 @@ Como no siempre se tiene interfaz gráfica, aquí explicaré el uso del comando 
 df -h
 ```
 
-
-``` bashheight="42" width="42"
+``` bash
 dd if= of= 
 ```
 
