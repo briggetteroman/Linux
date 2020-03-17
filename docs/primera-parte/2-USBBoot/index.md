@@ -22,7 +22,11 @@ Una vez abierta la herramienta.
 2. Luego en el menú ubicado en el lado derecho superior, como se observa en la imagen siguiente, y se le dará a la opción `Restore Disk Image`.
 ![](restoreDisk.png "restore image")
 
-3. Aparecerá una ventana 
+3. Aparecerá una ventana `Restore Disk Image`, que nos permitirá escoger la imagen iso que necesitamos para el Booteable.
+![](restoreImageWindow.png "restore image window")
+![](selectIso.png "select Image")
+
+4. xxxxx
 
 #### Comando de Linea (CLI)
 Como no siempre se tiene interfaz gráfica, aquí explicaré el uso del comando `DD` o Copia en Duro para la creación de un USB boot.
