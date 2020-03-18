@@ -39,7 +39,7 @@ Una vez abierta la herramienta.
 Como no siempre se tiene interfaz gráfica, aquí explicaré el uso del comando `DD` o Copia en Duro para la creación de un USB boot.
 
 
-1. Debemos encontrar la ruta de la partición donde se encuentra montado nuestro USB para ello usaremos el comando `df`, que nos listará todas las particiones que tiene montado el sistema operativo.
+Debemos encontrar el FileSystem donde se encuentra montado nuestro USB para ello usaremos el comando `df`, que nos listará todas las particiones que tiene montado el sistema operativo.
 ``` bash
 df -h
 ```
@@ -71,10 +71,12 @@ tmpfs           1,6G   60K  1,6G   1% /run/user/1000
 /dev/loop12     3,8M  3,8M     0 100% /snap/gnome-system-monitor/135
 /dev/sdb        7,5G  1,4G  6,1G  18% /media/username/USB
 ```
+Nos interesa saber la información de la columna `FileSystem` ***(linea número 25 resaltada)*** donde usualmente la ruta de directorio montaje de un USB sigue el patrón `/media/nombreUsuario/nombreUSB`. 
 
+Del resultado mostrado, nuestro USB se encuentra en el FileSystem `/dev/sdb`. Esa información será nuestro destino para el uso del comando `dd` 
 
 ``` bash
-dd if=/ruta/de/la/imagenUorigen of=/ruta/del/dispositivoOdestino
+dd if=/ruta/Origen of=/ruta/Destino
 ```
 
 ``` bash
