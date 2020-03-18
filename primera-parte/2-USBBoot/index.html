@@ -857,20 +857,81 @@ Como se observa en la imagen, basta con buscarlo directamente con el nombre <cod
 <img alt="" src="confirmDevice.png" title="confirm Device" /></p>
 </li>
 <li>
-<p>Comenzará el proceso de generar un USB Booteable.
+<p>Comenzará el proceso de generar el USB Booteable como se muestra en la siguiente imagen. El proceso puede tardar algunos minutos
 <img alt="" src="processRestore.png" title="process Restore" /></p>
 </li>
 </ol>
 <h4 id="comando-de-linea-cli">Comando de Linea (CLI)<a class="headerlink" href="#comando-de-linea-cli" title="Permanent link">&para;</a></h4>
 <p>Como no siempre se tiene interfaz gráfica, aquí explicaré el uso del comando <code>DD</code> o Copia en Duro para la creación de un USB boot.</p>
 <ol>
-<li>Debemos encontrar la ruta donde se encuentra montado nuestro USB para ello usaremos el comando <code>df</code>, que nos listará todas las particiones que tiene montado el sistema operativo.</li>
+<li>Debemos encontrar la ruta de la partición donde se encuentra montado nuestro USB para ello usaremos el comando <code>df</code>, que nos listará todas las particiones que tiene montado el sistema operativo.</li>
 </ol>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>df -h
 </code></pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dd <span class="k">if</span><span class="o">=</span> <span class="nv">of</span><span class="o">=</span> 
+<p>Resultado</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Filesystem      Size  Used Avail Use% Mounted on
+udev            <span class="m">7</span>,8G     <span class="m">0</span>  <span class="m">7</span>,8G   <span class="m">0</span>% /dev
+tmpfs           <span class="m">1</span>,6G  <span class="m">2</span>,1M  <span class="m">1</span>,6G   <span class="m">1</span>% /run
+/dev/sda7       101G   12G   84G  <span class="m">13</span>% /
+tmpfs           <span class="m">7</span>,8G  286M  <span class="m">7</span>,6G   <span class="m">4</span>% /dev/shm
+tmpfs           <span class="m">5</span>,0M  <span class="m">4</span>,0K  <span class="m">5</span>,0M   <span class="m">1</span>% /run/lock
+tmpfs           <span class="m">7</span>,8G     <span class="m">0</span>  <span class="m">7</span>,8G   <span class="m">0</span>% /sys/fs/cgroup
+/dev/loop0       15M   15M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-characters/399
+/dev/loop1      161M  161M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-3-28-1804/116
+/dev/loop4       90M   90M     <span class="m">0</span> <span class="m">100</span>% /snap/core/8268
+/dev/loop3       55M   55M     <span class="m">0</span> <span class="m">100</span>% /snap/core18/1668
+/dev/loop5       45M   45M     <span class="m">0</span> <span class="m">100</span>% /snap/gtk-common-themes/1440
+/dev/loop2      <span class="m">1</span>,0M  <span class="m">1</span>,0M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-logs/81
+/dev/loop7      <span class="m">3</span>,8M  <span class="m">3</span>,8M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-system-monitor/127
+/dev/loop8      <span class="m">4</span>,3M  <span class="m">4</span>,3M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-calculator/544
+/dev/loop6       92M   92M     <span class="m">0</span> <span class="m">100</span>% /snap/core/8689
+/dev/sda5       <span class="m">1</span>,9G  119M  <span class="m">1</span>,7G   <span class="m">7</span>% /boot
+/dev/sda8       305G  <span class="m">8</span>,2G  282G   <span class="m">3</span>% /home
+tmpfs           <span class="m">1</span>,6G   20K  <span class="m">1</span>,6G   <span class="m">1</span>% /run/user/121
+tmpfs           <span class="m">1</span>,6G   60K  <span class="m">1</span>,6G   <span class="m">1</span>% /run/user/1000
+/dev/loop9       15M   15M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-characters/495
+/dev/loop10     <span class="m">1</span>,0M  <span class="m">1</span>,0M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-logs/93
+/dev/loop11     <span class="m">4</span>,4M  <span class="m">4</span>,4M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-calculator/704
+/dev/loop12     <span class="m">3</span>,8M  <span class="m">3</span>,8M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-system-monitor/135
+<span class="hll">/dev/sdb        <span class="m">7</span>,5G  <span class="m">1</span>,4G  <span class="m">6</span>,1G  <span class="m">18</span>% /media/username/USB
+</span></code></pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dd <span class="k">if</span><span class="o">=</span>/ruta/de/la/imagenUorigen <span class="nv">of</span><span class="o">=</span>/ruta/del/dispositivoOdestino
+</code></pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>sudo apt install pv
+</code></pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dd <span class="k">if</span><span class="o">=</span>/home/user/Download/kali-linux-2020.1-live-amd64.iso <span class="p">|</span> pv <span class="p">|</span> <span class="nv">of</span><span class="o">=</span> 
 </code></pre></div>
 </td></tr></table>
 
