@@ -1,4 +1,5 @@
 site_name: Linux
+repo_url: https://github.com/briggetteroman/Linux
 theme:
   name: 'material'
   feature:
