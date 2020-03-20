@@ -963,21 +963,25 @@ tmpfs           <span class="m">1</span>,6G   60K  <span class="m">1</span>,6G  
 /dev/loop10     <span class="m">1</span>,0M  <span class="m">1</span>,0M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-logs/93
 /dev/loop11     <span class="m">4</span>,4M  <span class="m">4</span>,4M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-calculator/704
 /dev/loop12     <span class="m">3</span>,8M  <span class="m">3</span>,8M     <span class="m">0</span> <span class="m">100</span>% /snap/gnome-system-monitor/135
-<span class="hll">/dev/sdb        <span class="m">7</span>,5G  <span class="m">1</span>,4G  <span class="m">6</span>,1G  <span class="m">18</span>% /media/username/USB
+<span class="hll">/dev/sdb        <span class="m">7</span>,5G  <span class="m">1</span>,4G  <span class="m">6</span>,1G  <span class="m">18</span>% /media/userName/USB
 </span></code></pre></div>
 </td></tr></table>
 
 <p>Nos interesa saber la información de la columna <code>FileSystem</code> <strong><em>(linea número 25 resaltada)</em></strong> donde usualmente la ruta de directorio montaje de un USB sigue el patrón <code>/media/nombreUsuario/nombreUSB</code>. </p>
-<p>Del resultado mostrado, nuestro USB se encuentra en el FileSystem <code>/dev/sdb</code>. Esa información será nuestro destino para el uso del comando <code>dd</code> </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dd <span class="k">if</span><span class="o">=</span>/ruta/Origen <span class="nv">of</span><span class="o">=</span>/ruta/Destino
+<p>Del resultado mostrado, nuestro USB se encuentra en el FileSystem <code>/dev/sdb</code>. Esa información será nuestra ruta destino para el uso del comando <code>dd</code>.</p>
+<p>A continuación se muestra la sintaxis del comando </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dd <span class="k">if</span><span class="o">=</span>/ruta/Origen <span class="nv">of</span><span class="o">=</span>/ruta/Destino <span class="nv">bs</span><span class="o">=</span>tamanhoBloque
 </code></pre></div>
 </td></tr></table>
 
+<p>Si bien ese comando nos ayudará a copiar la imagen <code>iso</code> a nuestro USB al ejecutarlo no podremos enterarnos en que momento acaba el proceso, lo cual puede generarnos algunas dificultades para saber cuando termina. Por ello se usará el comando <code>pv</code>, que nos permitirá monitorizar como va el proceso de copia. </p>
+<p>Para instalar <code>pv</code>, ejecutar el siguiente comando en la consola.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>sudo apt install pv
 </code></pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dd <span class="k">if</span><span class="o">=</span>/home/user/Download/kali-linux-2020.1-live-amd64.iso <span class="p">|</span> pv <span class="p">|</span> <span class="nv">of</span><span class="o">=</span> 
+<p>Como tenemos la ruta de Destino con ayuda del comando <code>df</code>, ahora necesitamos la ruta donde se encuentra descargado nuestra imagen <code>iso</code>. Y se tendrá un comando de linea similar al siguiente:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>dd <span class="k">if</span><span class="o">=</span>/home/userName/Download/kali-linux-2020.1-live-amd64.iso <span class="nv">bs</span><span class="o">=</span>1M <span class="p">|</span> pv <span class="p">|</span> dd <span class="nv">of</span><span class="o">=</span>/media/userName/USB <span class="nv">bs</span><span class="o">=</span>1M 
 </code></pre></div>
 </td></tr></table>
 

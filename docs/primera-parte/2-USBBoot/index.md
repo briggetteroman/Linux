@@ -69,22 +69,27 @@ tmpfs           1,6G   60K  1,6G   1% /run/user/1000
 /dev/loop10     1,0M  1,0M     0 100% /snap/gnome-logs/93
 /dev/loop11     4,4M  4,4M     0 100% /snap/gnome-calculator/704
 /dev/loop12     3,8M  3,8M     0 100% /snap/gnome-system-monitor/135
-/dev/sdb        7,5G  1,4G  6,1G  18% /media/username/USB
+/dev/sdb        7,5G  1,4G  6,1G  18% /media/userName/USB
 ```
 Nos interesa saber la información de la columna `FileSystem` ***(linea número 25 resaltada)*** donde usualmente la ruta de directorio montaje de un USB sigue el patrón `/media/nombreUsuario/nombreUSB`. 
 
-Del resultado mostrado, nuestro USB se encuentra en el FileSystem `/dev/sdb`. Esa información será nuestro destino para el uso del comando `dd` 
+Del resultado mostrado, nuestro USB se encuentra en el FileSystem `/dev/sdb`. Esa información será nuestra ruta destino para el uso del comando `dd`.
 
+A continuación se muestra la sintaxis del comando 
 ``` bash
-dd if=/ruta/Origen of=/ruta/Destino
+dd if=/ruta/Origen of=/ruta/Destino bs=tamanhoBloque
 ```
 
+Si bien ese comando nos ayudará a copiar la imagen `iso` a nuestro USB al ejecutarlo no podremos enterarnos en que momento acaba el proceso, lo cual puede generarnos algunas dificultades para saber cuando termina. Por ello se usará el comando `pv`, que nos permitirá monitorizar como va el proceso de copia. 
+
+Para instalar `pv`, ejecutar el siguiente comando en la consola.
 ``` bash
 sudo apt install pv
 ```
 
+Como tenemos la ruta de Destino con ayuda del comando `df`, ahora necesitamos la ruta donde se encuentra descargado nuestra imagen `iso`. Y se tendrá un comando de linea similar al siguiente:
 ``` bash
-dd if=/home/user/Download/kali-linux-2020.1-live-amd64.iso | pv | of= 
+dd if=/home/userName/Download/kali-linux-2020.1-live-amd64.iso bs=1M | pv | dd of=/media/userName/USB bs=1M 
 ```
 
 ## Preparar una maquina Virtual
