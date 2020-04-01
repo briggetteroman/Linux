@@ -92,9 +92,17 @@ Como tenemos la ruta de Destino con ayuda del comando `df`, ahora necesitamos la
 dd if=/home/userName/Download/kali-linux-2020.1-live-amd64.iso bs=1M | pv | dd of=/media/userName/USB bs=1M 
 ```
 
-## Preparar una maquina Virtual
+## Preparar una Maquina Virtual
 ### VirtuaBox
+#### Enlaces de Descarga
 #### Software a descargar
+A continuación tendrá el enlace de descarga, donde podrá elegir para que plataforma desea usarlo
+* [Enlace para Descargar VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+#### Instalación
+##### Windows
 
+##### Linux
+
+![](virtualBoxInit.png "VirtualBox")
 ### VMWare
 #### Software a descargar
