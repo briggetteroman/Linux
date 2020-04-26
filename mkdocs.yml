@@ -22,6 +22,7 @@ nav:
     - 'Instalación Fedora': 'primera-parte/2-Install-Fedora.md'
     - 'Instalación Kali': 'primera-parte/2-Install-Kali.md'
   - Comandos Unix y GNU:
+    - 'Linux FileSystem': 'primera-parte/3-Filesystem/index.md'
     - 'Comandos UNIX': 'primera-parte/3-UnixCommands.md'
   - Gestión de software y procesos:
     - 'Gestión de paquetes': 'primera-parte/4-PackageManaging.md'
